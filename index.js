@@ -6,3 +6,5 @@ new http.Server((req, res) => {
     console.log(new Date, queryData);
     res.end();
 }).listen(6055);
+
+setInterval(() => { console.log('-'); }, 1000);
