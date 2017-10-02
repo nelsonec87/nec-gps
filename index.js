@@ -1,19 +1,8 @@
-let net = require('net');
+let http = require('http');
+var url = require('url');
 
-let callback = (socket) => {
-    // console.log(socket);
-    socket.on('data', function (data) {
-        console.log(data.toString());
-        socket.end();
-    });
-};
-
-net.createServer(callback).listen(6092);
-net.createServer(callback).listen(6130);
-net.createServer(callback).listen(6049);
-net.createServer(callback).listen(6095);
-net.createServer(callback).listen(8080);
-net.createServer(callback).listen(8443);
-net.createServer(callback).listen(6075);
-net.createServer(callback).listen(6089);
-net.createServer(callback).listen(6044);
+new http.Server((req, res) => {
+    var queryData = url.parse(req.url, true).query;
+    console.log(new Date, queryData);
+    res.end();
+}).listen(6055);
