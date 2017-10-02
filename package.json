@@ -1,0 +1,19 @@
+{
+  "name": "nec-gps",
+  "version": "1.0.0",
+  "description": "gps server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelsonec87/nec-gps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nelsonec87/nec-gps/issues"
+  },
+  "homepage": "https://github.com/nelsonec87/nec-gps#readme"
+}
