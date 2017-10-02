@@ -1,10 +1,13 @@
 let http = require('http');
 let port = (process.env.PORT || 5000);
-let server = new http.Server((req, res) => {
+
+let callback = (req, res) => {
     console.log(req.headers);
     res.write(JSON.stringify(req.headers));
     res.end();
-});
+};
 
-server.listen(port);
-console.log('port', port);
+http.Server(callback).listen(6092);
+http.Server(callback).listen(6130);
+http.Server(callback).listen(6049);
+http.Server(callback).listen(6095);
