@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/nelsonec87/nec-gps/issues"
   },
-  "homepage": "https://github.com/nelsonec87/nec-gps#readme"
+  "homepage": "https://github.com/nelsonec87/nec-gps#readme",
+  "dependencies": {
+    "lowdb": "^1.0.0"
+  }
 }
