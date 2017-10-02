@@ -1,13 +1,14 @@
-let http = require('http');
-let port = (process.env.PORT || 5000);
+let net = require('net');
 
-let callback = (req, res) => {
-    console.log(req.headers);
-    res.write(JSON.stringify(req.headers));
-    res.end();
+let callback = (socket) => {
+    // console.log(socket);
+    socket.on('data', function (data) {
+        console.log(data.toString());
+        socket.end();
+    });
 };
 
-http.Server(callback).listen(6092);
-http.Server(callback).listen(6130);
-http.Server(callback).listen(6049);
-http.Server(callback).listen(6095);
+net.createServer(callback).listen(6092);
+net.createServer(callback).listen(6130);
+net.createServer(callback).listen(6049);
+net.createServer(callback).listen(6095);
