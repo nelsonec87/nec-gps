@@ -14,3 +14,6 @@ net.createServer(callback).listen(6049);
 net.createServer(callback).listen(6095);
 net.createServer(callback).listen(8080);
 net.createServer(callback).listen(8443);
+net.createServer(callback).listen(6075);
+net.createServer(callback).listen(6089);
+net.createServer(callback).listen(6044);
